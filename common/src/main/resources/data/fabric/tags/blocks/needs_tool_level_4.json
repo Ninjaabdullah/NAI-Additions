@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "nai_additions:reptianium_ore",
+    "nai_additions:deepslate_reptianium_ore",
+    "nai_additions:reptianium_block"
+  ]
+}
