@@ -5,16 +5,18 @@
 
   "name": "NAI Additions",
   "description": "Additions made by Ninjaabdullah for Minecraft (WIP)",
-  "authors": [],
+  "authors": [
+    "Ninjaabdullah"
+  ],
   "contact": {},
 
   "license": "MIT",
-  "icon": "icon.png",
+  "icon": "assets/nai_additions/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.nai.nai_additions.fabric.NAIAdditionsFabric"
+      "net.nai.additions.fabric.NAIAdditionsFabric"
     ]
   },
   "mixins": [
@@ -23,6 +25,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.15.11",
-    "minecraft": ">=1.20.1"
+    "minecraft": ">=1.20.1",
+    "architectury": ">=9.2.14"
   }
 }

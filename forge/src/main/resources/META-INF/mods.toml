@@ -11,7 +11,7 @@ loaderVersion="[47,)" #mandatory This is typically bumped every Minecraft versio
 # Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
 license="MIT"
 # A URL to refer people to when problems occur with this mod
-issueTrackerURL="https://github.com/Ninjaabdullah/NAI-Additions/issues"
+issueTrackerURL="https://github.com/Ninjaabdullah/NAI_Additions/issues"
 # A list of mods - how many allowed here is determined by the individual mod loader
 [[mods]] #mandatory
 # The modid of the mod
@@ -27,7 +27,7 @@ displayName="NAI Additions" #mandatory
 # A URL for the "homepage" for this mod, displayed in the mod UI
 #displayURL="http://example.com/" #optional
 # A file name (in the root of the mod JAR) containing a logo for display
-logoFile="icon.png" #optional
+logoFile="assets/nai_additions/icon.png" #optional
 # A text field displayed in the mod UI
 #credits="Thanks for this example mod goes to Java" #optional
 # A text field displayed in the mod UI
@@ -61,6 +61,12 @@ Additions made by Ninjaabdullah for Minecraft (WIP)
    modId="minecraft"
    mandatory=true
    # This version range declares a minimum of the current minecraft version up to but not including the next major version
-   versionRange="[1.20.1,1.21)"
+   versionRange="[1.20.1,)"
+   ordering="NONE"
+   side="BOTH"
+[[dependencies.nai_additions]]
+   modId="architectury"
+   mandatory=true
+   versionRange="[9.2.14,)"
    ordering="NONE"
    side="BOTH"
