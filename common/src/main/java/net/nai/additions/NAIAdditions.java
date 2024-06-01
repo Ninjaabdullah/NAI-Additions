@@ -1,8 +1,7 @@
 package net.nai.additions;
 
-import net.nai.additions.registry.NAIBlocks;
-import net.nai.additions.registry.NAIItems;
-import net.nai.additions.registry.NAITabs;
+import net.nai.additions.registry.*;
+import net.nai.additions.worldgen.NAIWorldGeneration;
 
 public class NAIAdditions
 {
@@ -12,5 +11,6 @@ public class NAIAdditions
 		NAITabs.init();
 		NAIBlocks.init();
 		NAIItems.init();
+		NAIWorldGeneration.init();
 	}
 }
