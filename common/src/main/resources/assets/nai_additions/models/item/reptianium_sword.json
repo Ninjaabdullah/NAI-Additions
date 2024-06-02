@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures":{
+        "layer0": "nai_additions:item/reptianium_sword"
+    }
+}

@@ -7,5 +7,16 @@
   "block.nai_additions.reptianium_block": "Reptianium Block",
 
   "item.nai_additions.reptianium_shard": "Reptianium Shard",
-  "item.nai_additions.reptianium_ingot": "Reptianium Ingot"
+  "item.nai_additions.reptianium_ingot": "Reptianium Ingot",
+
+  "item.nai_additions.reptianium_sword": "Reptianium Sword",
+  "item.nai_additions.reptianium_pickaxe": "Reptianium Pickaxe",
+  "item.nai_additions.reptianium_axe": "Reptianium Axe",
+  "item.nai_additions.reptianium_shovel": "Reptianium Shovel",
+  "item.nai_additions.reptianium_hoe": "Reptianium Hoe",
+
+  "item.nai_additions.reptianium_helmet": "Reptianium Helmet",
+  "item.nai_additions.reptianium_chestplate": "Reptianium Chestplate",
+  "item.nai_additions.reptianium_leggings": "Reptianium Leggings",
+  "item.nai_additions.reptianium_boots": "Reptianium Boots"
 }

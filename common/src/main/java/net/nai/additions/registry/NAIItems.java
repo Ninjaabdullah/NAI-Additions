@@ -3,11 +3,14 @@ package net.nai.additions.registry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.nai.additions.NAIAdditions;
 import net.nai.additions.items.ReptianiumBlockItem;
+import net.nai.additions.items.armor.NAIArmorMaterials;
+import net.nai.additions.items.tools.NAIAxeItem;
+import net.nai.additions.items.tools.NAIHoeItem;
+import net.nai.additions.items.tools.NAIPickaxeItem;
+import net.nai.additions.items.tools.NAIToolTiers;
 
 public class NAIItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(NAIAdditions.MOD_ID, Registries.ITEM);
@@ -40,6 +43,35 @@ public class NAIItems {
 
     public static final RegistrySupplier<Item> REPTIANIUM_INGOT = ITEMS.register("reptianium_ingot", () ->
             new Item(commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    // Reptianium Tools
+    public static final RegistrySupplier<Item> REPTIANIUM_SWORD = ITEMS.register("reptianium_sword", () ->
+            new SwordItem(NAIToolTiers.REPTIANIUM, 1, -2.4f, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_PICKAXE = ITEMS.register("reptianium_pickaxe", () ->
+            new NAIPickaxeItem(NAIToolTiers.REPTIANIUM, -5, -2.4f, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_AXE = ITEMS.register("reptianium_axe", () ->
+            new NAIAxeItem(NAIToolTiers.REPTIANIUM, 4, -3.0f, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_SHOVEL = ITEMS.register("reptianium_shovel", () ->
+            new ShovelItem(NAIToolTiers.REPTIANIUM, -5, -2.4f, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_HOE = ITEMS.register("reptianium_hoe", () ->
+            new NAIHoeItem(NAIToolTiers.REPTIANIUM, -14, 1.0f,commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    // Reptianium Armor
+    public static final RegistrySupplier<Item> REPTIANIUM_HELMET = ITEMS.register("reptianium_helmet", () ->
+            new ArmorItem(NAIArmorMaterials.REPTIANIUM, ArmorItem.Type.HELMET, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_CHESTPLATE = ITEMS.register("reptianium_chestplate", () ->
+            new ArmorItem(NAIArmorMaterials.REPTIANIUM, ArmorItem.Type.CHESTPLATE, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_LEGGINGS = ITEMS.register("reptianium_leggings", () ->
+            new ArmorItem(NAIArmorMaterials.REPTIANIUM, ArmorItem.Type.LEGGINGS, commonProperties.rarity(Rarity.EPIC).fireResistant()));
+
+    public static final RegistrySupplier<Item> REPTIANIUM_BOOTS = ITEMS.register("reptianium_boots", () ->
+            new ArmorItem(NAIArmorMaterials.REPTIANIUM, ArmorItem.Type.BOOTS, commonProperties.rarity(Rarity.EPIC).fireResistant()));
 
     public static void init() {
         ITEMS.register();
