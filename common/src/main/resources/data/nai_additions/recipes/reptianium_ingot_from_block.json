@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "reptianium_ingot",
+  "ingredients": [
+    {
+      "item": "nai_additions:reptianium_block"
+    }
+  ],
+  "result": {
+    "item": "nai_additions:reptianium_ingot",
+    "count": 9
+  }
+}

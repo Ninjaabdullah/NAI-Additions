@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "reptianium_ingot",
+  "ingredients": [
+    {
+      "item": "nai_additions:reptianium_shard"
+    },
+    {
+      "item": "nai_additions:reptianium_shard"
+    },
+    {
+      "item": "nai_additions:reptianium_shard"
+    },
+    {
+      "item": "nai_additions:reptianium_shard"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "result": {
+    "item": "nai_additions:reptianium_ingot"
+  }
+}

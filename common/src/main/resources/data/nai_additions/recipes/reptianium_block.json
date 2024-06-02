@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "nai_additions:reptianium_ingot"
+    }
+  },
+  "result": {
+    "item": "nai_additions:reptianium_block"
+  }
+}

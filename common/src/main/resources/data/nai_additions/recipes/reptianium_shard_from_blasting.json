@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "group": "reptianium_shard",
+  "ingredient": [
+    {
+      "item": "nai_additions:reptianium_ore"
+    },
+    {
+      "item": "nai_additions:deepslate_reptianium_ore"
+    }
+  ],
+  "result": "nai_additions:reptianium_shard",
+  "experience": 5,
+  "cookingtime": 200
+}
