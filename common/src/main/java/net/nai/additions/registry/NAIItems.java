@@ -1,8 +1,13 @@
 package net.nai.additions.registry;
 
+import dev.architectury.registry.CreativeTabRegistry;
 import dev.architectury.registry.registries.DeferredRegister;
 import dev.architectury.registry.registries.RegistrySupplier;
+import net.minecraft.ChatFormatting;
+import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.nai.additions.NAIAdditions;
 import net.nai.additions.items.ReptianiumBlockItem;
@@ -73,7 +78,20 @@ public class NAIItems {
     public static final RegistrySupplier<Item> REPTIANIUM_BOOTS = ITEMS.register("reptianium_boots", () ->
             new ArmorItem(NAIArmorMaterials.REPTIANIUM, ArmorItem.Type.BOOTS, commonProperties.rarity(Rarity.EPIC).fireResistant()));
 
+    // Reptianium Upgrade
+    public static final RegistrySupplier<Item> REPTIANIUM_UPGRADE_SMITHING_TEMPLATE = ITEMS.register("reptianium_upgrade_smithing_template", () ->
+            new SmithingTemplateItem(
+                    Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(NAIAdditions.MOD_ID, "smithing_template.reptianium_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                    Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(NAIAdditions.MOD_ID, "smithing_template.reptianium_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                    Component.translatable(Util.makeDescriptionId("upgrade", new ResourceLocation(NAIAdditions.MOD_ID, "reptianium_upgrade"))).withStyle(ChatFormatting.GRAY),
+                    Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(NAIAdditions.MOD_ID, "smithing_template.reptianium_upgrade.base_slot_description"))),
+                    Component.translatable(Util.makeDescriptionId("item", new ResourceLocation(NAIAdditions.MOD_ID, "smithing_template.reptianium_upgrade.additions_slot_description"))),
+                    SmithingTemplateItem.createNetheriteUpgradeIconList(),
+                    SmithingTemplateItem.createNetheriteUpgradeMaterialList()
+            ));
+
     public static void init() {
         ITEMS.register();
+        CreativeTabRegistry.append(NAITabs.NAI_ADDITIONS_TAB, REPTIANIUM_UPGRADE_SMITHING_TEMPLATE);
     }
 }

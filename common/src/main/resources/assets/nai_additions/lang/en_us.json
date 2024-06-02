@@ -18,5 +18,11 @@
   "item.nai_additions.reptianium_helmet": "Reptianium Helmet",
   "item.nai_additions.reptianium_chestplate": "Reptianium Chestplate",
   "item.nai_additions.reptianium_leggings": "Reptianium Leggings",
-  "item.nai_additions.reptianium_boots": "Reptianium Boots"
+  "item.nai_additions.reptianium_boots": "Reptianium Boots",
+
+  "upgrade.nai_additions.reptianium_upgrade": "Reptianium Upgrade",
+  "item.nai_additions.smithing_template.reptianium_upgrade.additions_slot_description": "Add Reptianium Ingot",
+  "item.nai_additions.smithing_template.reptianium_upgrade.applies_to": "Netherite Equipment",
+  "item.nai_additions.smithing_template.reptianium_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.nai_additions.smithing_template.reptianium_upgrade.ingredients": "Reptianium Ingot"
 }
