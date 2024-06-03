@@ -90,6 +90,20 @@ public class NAIItems {
                     SmithingTemplateItem.createNetheriteUpgradeMaterialList()
             ));
 
+    // Essences
+    public static final RegistrySupplier<Item> ESSENCE_OF_VIRTUS = ITEMS.register("essence_of_virtus", () ->
+            new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
+
+    public static final RegistrySupplier<Item> ESSENCE_OF_NEFAS = ITEMS.register("essence_of_nefas", () ->
+            new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
+
+    // Lamps Block Items
+    public static final RegistrySupplier<Item> VIRTUS_LAMP = ITEMS.register("virtus_lamp", () ->
+            new BlockItem(NAIBlocks.VIRTUS_LAMP.get(), new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).rarity(Rarity.RARE)));
+
+    public static final RegistrySupplier<Item> NEFAS_LAMP = ITEMS.register("nefas_lamp", () ->
+            new BlockItem(NAIBlocks.NEFAS_LAMP.get(), new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).rarity(Rarity.RARE)));
+
     public static void init() {
         ITEMS.register();
         CreativeTabRegistry.append(NAITabs.NAI_ADDITIONS_TAB, REPTIANIUM_UPGRADE_SMITHING_TEMPLATE);

@@ -43,6 +43,19 @@ public class NAIBlocks {
                     .strength(11.0f)
                     .sound(SoundType.NETHERITE_BLOCK)));
 
+    // Lamps
+    public static final RegistrySupplier<Block> VIRTUS_LAMP = BLOCKS.register("virtus_lamp", () ->
+            new Block(BlockBehaviour.Properties.of()
+                    .strength(2.0f)
+                    .sound(SoundType.AMETHYST)
+                    .lightLevel((blockStatex) -> 15)));
+
+    public static final RegistrySupplier<Block> NEFAS_LAMP = BLOCKS.register("nefas_lamp", () ->
+            new Block(BlockBehaviour.Properties.of()
+                    .strength(2.0f)
+                    .sound(SoundType.AMETHYST)
+                    .lightLevel((blockStatex) -> 6)));
+
     public static void init() {
         BLOCKS.register();
     }

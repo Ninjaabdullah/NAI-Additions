@@ -6,6 +6,9 @@
   "block.nai_additions.deepslate_reptianium_ore": "Deepslate Reptianium Ore",
   "block.nai_additions.reptianium_block": "Reptianium Block",
 
+  "block.nai_additions.virtus_lamp": "Virtus Lamp",
+  "block.nai_additions.nefas_lamp": "Nefas Lamp",
+
   "item.nai_additions.reptianium_shard": "Reptianium Shard",
   "item.nai_additions.reptianium_ingot": "Reptianium Ingot",
 
@@ -19,6 +22,9 @@
   "item.nai_additions.reptianium_chestplate": "Reptianium Chestplate",
   "item.nai_additions.reptianium_leggings": "Reptianium Leggings",
   "item.nai_additions.reptianium_boots": "Reptianium Boots",
+
+  "item.nai_additions.essence_of_virtus": "Essence of virtus",
+  "item.nai_additions.essence_of_nefas": "Essence of Nefas",
 
   "upgrade.nai_additions.reptianium_upgrade": "Reptianium Upgrade",
   "item.nai_additions.smithing_template.reptianium_upgrade.additions_slot_description": "Add Reptianium Ingot",
