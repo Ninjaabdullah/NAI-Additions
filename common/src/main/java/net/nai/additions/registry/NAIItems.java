@@ -97,6 +97,9 @@ public class NAIItems {
     public static final RegistrySupplier<Item> ESSENCE_OF_NEFAS = ITEMS.register("essence_of_nefas", () ->
             new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
 
+    public static final RegistrySupplier<Item> ESSENCE_OF_LIFE = ITEMS.register("essence_of_life", () ->
+            new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
+
     // Lamps Block Items
     public static final RegistrySupplier<Item> VIRTUS_LAMP = ITEMS.register("virtus_lamp", () ->
             new BlockItem(NAIBlocks.VIRTUS_LAMP.get(), new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).rarity(Rarity.RARE)));
