@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "DSD",
+    "SAS",
+    "DSD"
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:soul_lantern"
+    },
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    },
+    "A": {
+      "item": "nai_additions:essence_of_virtus"
+    }
+  },
+  "result": {
+    "item": "nai_additions:virtus_lamp",
+    "count": 1
+  }
+}

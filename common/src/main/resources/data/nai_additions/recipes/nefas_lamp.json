@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "DSD",
+    "SVS",
+    "DSD"
+  ],
+  "key": {
+    "V": {
+      "item": "nai_additions:essence_of_nefas"
+    },
+    "S": {
+      "item": "minecraft:soul_lantern"
+    },
+    "D": {
+      "item": "minecraft:polished_deepslate"
+    }
+  },
+  "result": {
+    "item": "nai_additions:nefas_lamp",
+    "count": 1
+  }
+}
