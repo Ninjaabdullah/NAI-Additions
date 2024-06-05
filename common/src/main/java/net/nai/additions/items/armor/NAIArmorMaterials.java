@@ -11,7 +11,7 @@ import net.nai.additions.registry.NAIItems;
 import java.util.function.Supplier;
 
 public enum NAIArmorMaterials implements ArmorMaterial {
-    REPTIANIUM("reptianium", 140, new int[]{10, 18, 24, 12}, 25, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.3F, () ->
+    REPTIANIUM("reptianium", 140, new int[]{6, 14, 18, 6}, 25, SoundEvents.ARMOR_EQUIP_NETHERITE, 5.0F, 0.3F, () ->
             Ingredient.of(NAIItems.REPTIANIUM_INGOT.get()));
 
     private static final int[] baseDurability = new int[]{13, 15, 16, 11};
