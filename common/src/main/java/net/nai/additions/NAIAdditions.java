@@ -16,5 +16,7 @@ public class NAIAdditions
 		NAIItems.init();
 		NAIWorldGeneration.init();
 		NAIBlockEntityTypes.init();
+		NAILootTables.init();
+		NAITrades.init();
 	}
 }
