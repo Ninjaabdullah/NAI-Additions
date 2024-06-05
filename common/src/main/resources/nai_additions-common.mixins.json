@@ -4,6 +4,7 @@
   "package": "net.nai.additions.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "NaturalSpawnerMixin"
   ],
   "client": [
   ],

@@ -10,6 +10,8 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.nai.additions.NAIAdditions;
+import net.nai.additions.blocks.NefasLampBlock;
+import net.nai.additions.blocks.VirtusLampBlock;
 
 public class NAIBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(NAIAdditions.MOD_ID, Registries.BLOCK);
@@ -45,13 +47,13 @@ public class NAIBlocks {
 
     // Lamps
     public static final RegistrySupplier<Block> VIRTUS_LAMP = BLOCKS.register("virtus_lamp", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new VirtusLampBlock(BlockBehaviour.Properties.of()
                     .strength(2.0f)
                     .sound(SoundType.AMETHYST)
                     .lightLevel((blockStatex) -> 15)));
 
     public static final RegistrySupplier<Block> NEFAS_LAMP = BLOCKS.register("nefas_lamp", () ->
-            new Block(BlockBehaviour.Properties.of()
+            new NefasLampBlock(BlockBehaviour.Properties.of()
                     .strength(2.0f)
                     .sound(SoundType.AMETHYST)
                     .lightLevel((blockStatex) -> 6)));
