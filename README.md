@@ -1,7 +1,8 @@
 # NAI Additions Minecraft Mod
 ---
-![[Alpha cover (New).png]]
+![Alpha cover (New)](https://github.com/Ninjaabdullah/NAI_Additions/assets/110191900/3cea0ae6-2d20-4787-b0be-3071ab77b356)
 ![GitHub License](https://img.shields.io/github/license/ninjaabdullah/nai_additions?style=flat&logo=github) ![Modrinth Version](https://img.shields.io/modrinth/v/nai_additions?style=flat&logo=modrinth&logoColor=white&label=Latest%20Version&labelColor=00AF5C) ![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/nai_additions?style=flat&logo=modrinth&logoColor=white&label=Available%20for&labelColor=00AF5C) 
+
 Additions made by Ninjaabdullah for Minecraft (WIP)
 ### Requirements & Recommendations
 ---
@@ -14,7 +15,7 @@ For Fabric: [Fabric API](https://modrinth.com/mod/fabric-api) is Required
 NAI Additions adds new features including:
 #### Reptianium
 - Reptianium is a new tier of material that is much stronger than Netherite and much more expensive.
-- It can be found in the overworld from Y-level 16 to Y-level -60 and it is very rare.
+- It can be found in the overworld from Y-level 16 to Y-level -60 and is very rare.
 - Reptianium Ore requires Netherite Pickaxe for it to drop its shards.
 - Reptianium Shards can be used with Netherite Ingots to craft Reptianium Ingots.
 - Reptianium Ingots can be used with Reptianium Smithing Template in the Smithing Table to upgrade Netherite gear.
@@ -32,8 +33,8 @@ NAI Additions adds new features including:
 - Will do stuff in future updates
 ### Notice
 ---
-I don't recommended including this mod in modpacks while it's in Alpha, As it will go significant changes as I develop it, But if you wish to include it in your modpack, Feel free to do so.
+I don't recommend including this mod in modpacks while it's in Alpha, As it will undergo significant changes as I develop it, But if you wish to include it in your modpack, Feel free to do so.
 
 **Always Backup Your World!**
 
-P.S. : I'm making this project for fun! And also to learn Java, It might not get updated or maintained frequently, But I will try to not abandon it.
+P.S.: I'm making this project for fun! And also to learn Java, It might not get updated or maintained frequently, But I will try to not abandon it.
