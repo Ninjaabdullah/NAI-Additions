@@ -13,7 +13,7 @@ public class ReptianiumBlockItem extends BlockItem {
     @Override
     public void onDestroyed(ItemEntity itemEntity) {
         if(!itemEntity.level().isClientSide && itemEntity.isOnFire()) {
-            itemEntity.level().explode(itemEntity, itemEntity.getX(), itemEntity.getY(0.0625), itemEntity.getZ(), 200.0f, Level.ExplosionInteraction.TNT);
+            itemEntity.level().explode(itemEntity, itemEntity.getX(), itemEntity.getY(0.0625), itemEntity.getZ(), 200.0f, Level.ExplosionInteraction.BLOCK);
         }
     }
 }
