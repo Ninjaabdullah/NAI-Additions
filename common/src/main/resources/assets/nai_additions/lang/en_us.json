@@ -9,6 +9,9 @@
   "block.nai_additions.virtus_lamp": "Virtus Lamp",
   "block.nai_additions.nefas_lamp": "Nefas Lamp",
 
+  "enchantment.nai_additions.emission_detector": "Emission Detector",
+  "enchantment.nai_additions.emission_detector.desc": "Detects radioactive materials' emissions near the player",
+
   "item.nai_additions.reptianium_shard": "Reptianium Shard",
   "item.nai_additions.reptianium_ingot": "Reptianium Ingot",
 

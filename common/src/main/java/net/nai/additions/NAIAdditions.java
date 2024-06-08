@@ -14,6 +14,7 @@ public class NAIAdditions
 		NAITabs.init();
 		NAIBlocks.init();
 		NAIItems.init();
+		NAIEnchantments.init();
 		NAIWorldGeneration.init();
 		NAIBlockEntityTypes.init();
 		NAILootTables.init();
