@@ -9,6 +9,7 @@ import net.minecraft.world.item.Items;
 public class NAITrades {
 
     public static void init() {
+        NAIItems.REPTIANIUM_UPGRADE_SMITHING_TEMPLATE.listen((item ->
         TradeRegistry.registerVillagerTrade(VillagerProfession.TOOLSMITH, 5,
                 new SimpleTrade(
                         new ItemStack(Items.EMERALD, 64),
@@ -16,6 +17,7 @@ public class NAITrades {
                         NAIItems.REPTIANIUM_UPGRADE_SMITHING_TEMPLATE.get().getDefaultInstance(),
                         1,
                         50,
-                        0.5f));
+                        0.5f))
+        ));
     }
 }
