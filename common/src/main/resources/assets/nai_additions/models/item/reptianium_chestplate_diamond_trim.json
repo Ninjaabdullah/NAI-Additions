@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nai_additions:item/reptianium_chestplate",
+    "layer1": "minecraft:trims/items/chestplate_trim_diamond"
+  }
+}
