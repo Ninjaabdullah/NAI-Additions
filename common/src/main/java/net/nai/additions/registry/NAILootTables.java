@@ -32,7 +32,7 @@ public class NAILootTables {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(UniformGenerator.between(1,6))
                         .when(LootItemRandomChanceCondition.randomChance(0.3f))
-                        .add(LootItem.lootTableItem(NAIItems.ESSENCE_OF_VIRTUS.get()));
+                        .add(LootItem.lootTableItem(NAIItems.VIRTUS_ESSENCE.get()));
                 context.addPool(pool);
             }
 
@@ -40,14 +40,14 @@ public class NAILootTables {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
                         .when(LootItemRandomChanceCondition.randomChance(0.125f))
-                        .add(LootItem.lootTableItem(NAIItems.ESSENCE_OF_VIRTUS.get()));
+                        .add(LootItem.lootTableItem(NAIItems.VIRTUS_ESSENCE.get()));
                 context.addPool(pool);
             }
 
             if (builtin && EntityType.VEX.getDefaultLootTable().equals(id)) {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
-                        .add(LootItem.lootTableItem(NAIItems.ESSENCE_OF_NEFAS.get()));
+                        .add(LootItem.lootTableItem(NAIItems.NEFAS_ESSENCE.get()));
                 context.addPool(pool);
             }
         });

@@ -26,9 +26,9 @@
   "item.nai_additions.reptianium_leggings": "Reptianium Leggings",
   "item.nai_additions.reptianium_boots": "Reptianium Boots",
 
-  "item.nai_additions.essence_of_virtus": "Essence of Virtus",
-  "item.nai_additions.essence_of_nefas": "Essence of Nefas",
-  "item.nai_additions.essence_of_life": "Essence of Life",
+  "item.nai_additions.virtus_essence": "Virtus Essence",
+  "item.nai_additions.nefas_essence": "Nefas Essence",
+  "item.nai_additions.life_essence": "Life Essence",
 
   "upgrade.nai_additions.reptianium_upgrade": "Reptianium Upgrade",
   "item.nai_additions.smithing_template.reptianium_upgrade.additions_slot_description": "Add Reptianium Ingot",

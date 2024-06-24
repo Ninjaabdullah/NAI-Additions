@@ -88,13 +88,13 @@ public class NAIItems {
             ));
 
     // Essences
-    public static final RegistrySupplier<Item> ESSENCE_OF_VIRTUS = ITEMS.register("essence_of_virtus", () ->
+    public static final RegistrySupplier<Item> VIRTUS_ESSENCE = ITEMS.register("virtus_essence", () ->
             new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
 
-    public static final RegistrySupplier<Item> ESSENCE_OF_NEFAS = ITEMS.register("essence_of_nefas", () ->
+    public static final RegistrySupplier<Item> NEFAS_ESSENCE = ITEMS.register("nefas_essence", () ->
             new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
 
-    public static final RegistrySupplier<Item> ESSENCE_OF_LIFE = ITEMS.register("essence_of_life", () ->
+    public static final RegistrySupplier<Item> LIFE_ESSENCE = ITEMS.register("life_essence", () ->
             new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
 
     // Lamps Block Items

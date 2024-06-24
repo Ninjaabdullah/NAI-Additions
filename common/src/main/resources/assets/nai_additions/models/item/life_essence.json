@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures":{
-    "layer0": "nai_additions:item/essence_of_life"
+    "layer0": "nai_additions:item/life_essence"
   }
 }
