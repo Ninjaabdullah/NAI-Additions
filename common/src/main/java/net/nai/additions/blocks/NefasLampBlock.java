@@ -1,7 +1,6 @@
 package net.nai.additions.blocks;
 
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.util.Mth;
@@ -15,6 +14,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.nai.additions.blocks.entity.NefasLampBlockEntity;
 import net.nai.additions.registry.NAIBlockEntityTypes;
+import net.nai.additions.registry.NAIParticles;
 import org.jetbrains.annotations.Nullable;
 
 public class NefasLampBlock extends BaseEntityBlock {
@@ -60,7 +60,7 @@ public class NefasLampBlock extends BaseEntityBlock {
                 double f = (double) mutableBlockPos.getZ() + randomSource.nextDouble();
                 BlockState blockState1 = level.getBlockState(mutableBlockPos);
                 if(!blockState1.isCollisionShapeFullBlock(level, mutableBlockPos)) {
-                    level.addParticle(ParticleTypes.ENTITY_EFFECT, d, e, f, 0.2, 0.2, 0.2);
+                    level.addParticle(NAIParticles.NEFAS_PARTICLE.get(), d, e, f, 0.0, 0.075, 0.0);
                 }
             }
         }

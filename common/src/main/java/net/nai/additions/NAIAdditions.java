@@ -12,6 +12,7 @@ public class NAIAdditions
 
 	public static void init() {
 		NAITabs.init();
+		NAIParticles.init();
 		NAIBlocks.init();
 		NAIItems.init();
 		NAIEnchantments.init();

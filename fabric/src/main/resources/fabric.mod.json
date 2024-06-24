@@ -17,6 +17,9 @@
   "entrypoints": {
     "main": [
       "net.nai.additions.fabric.NAIAdditionsFabric"
+    ],
+    "client": [
+      "net.nai.additions.fabric.NAIAdditionsFabricClient"
     ]
   },
   "mixins": [
