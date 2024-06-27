@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "nai_additions:reptianium_hoe"
+    },
+    "title": {
+      "translate": "advancements.nai_additions.reptianium_hoe.title"
+    },
+    "description": {
+      "translate": "advancements.nai_additions.reptianium_hoe.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "nai_additions:nai_additions/reptianium_ingot",
+  "criteria": {
+    "anything": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nai_additions:reptianium_hoe"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

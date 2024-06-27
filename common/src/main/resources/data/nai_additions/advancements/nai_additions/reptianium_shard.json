@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "nai_additions:reptianium_shard"
+    },
+    "title": {
+      "translate": "advancements.nai_additions.reptianium_shard.title"
+    },
+    "description": {
+      "translate": "advancements.nai_additions.reptianium_shard.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nai_additions:nai_additions/root",
+  "criteria": {
+    "crafting_table": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nai_additions:reptianium_shard"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

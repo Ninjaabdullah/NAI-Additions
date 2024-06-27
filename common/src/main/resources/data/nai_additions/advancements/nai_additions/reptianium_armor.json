@@ -1,0 +1,47 @@
+{
+  "display": {
+    "icon": {
+      "item": "nai_additions:reptianium_chestplate"
+    },
+    "title": {
+      "translate": "advancements.nai_additions.reptianium_armor.title"
+    },
+    "description": {
+      "translate": "advancements.nai_additions.reptianium_armor.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nai_additions:nai_additions/reptianium_ingot",
+  "criteria": {
+    "anything": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nai_additions:reptianium_helmet"
+            ]
+          },
+          {
+            "items": [
+              "nai_additions:reptianium_chestplate"
+            ]
+          },
+          {
+            "items": [
+              "nai_additions:reptianium_leggings"
+            ]
+          },
+          {
+            "items": [
+              "nai_additions:reptianium_boots"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

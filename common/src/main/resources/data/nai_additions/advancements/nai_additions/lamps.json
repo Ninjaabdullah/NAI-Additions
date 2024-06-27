@@ -1,0 +1,44 @@
+{
+  "display": {
+    "icon": {
+      "item": "nai_additions:virtus_lamp"
+    },
+    "title": {
+      "translate": "advancements.nai_additions.lamps.title"
+    },
+    "description": {
+      "translate": "advancements.nai_additions.lamps.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "parent": "nai_additions:nai_additions/essence",
+  "criteria": {
+    "virtus_lamp": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "nai_additions:virtus_lamp",
+            "properties": {}
+          }
+        ]
+      }
+    },
+    "nefas_lamp": {
+      "trigger": "minecraft:placed_block",
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:block_state_property",
+            "block": "nai_additions:nefas_lamp",
+            "properties": {}
+          }
+        ]
+      }
+    }
+  }
+}
