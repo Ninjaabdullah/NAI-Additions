@@ -65,7 +65,7 @@ public class NefasLampBlock extends BaseEntityBlock {
                             }
                         }
                     }
-                    Thread.sleep(120); // 50 milliseconds delay between each radius increment
+                    Thread.sleep(120);
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();

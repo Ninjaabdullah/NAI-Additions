@@ -11,6 +11,7 @@ import net.nai.additions.NAIAdditions;
 public class NAIWorldGeneration {
 
     public static void init() {
+        // Reptianium Ore Generation
         LifecycleEvent.SETUP.register( () ->
                 BiomeModifications.addProperties((biomeContext, mutable) -> {
                     mutable.getGenerationProperties().addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,

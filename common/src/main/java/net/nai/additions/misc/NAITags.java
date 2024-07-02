@@ -7,5 +7,6 @@ import net.minecraft.world.level.block.Block;
 import net.nai.additions.NAIAdditions;
 
 public class NAITags {
+    // Emitters Tag
     public static final TagKey<Block> EMITTERS = TagKey.create(Registries.BLOCK, new ResourceLocation(NAIAdditions.MOD_ID, "emitters"));
 }

@@ -36,12 +36,14 @@ public class NaturalSpawnerMixin {
                     if (chunk != null) {
                         for (BlockPos blockPos : chunk.getBlockEntitiesPos()) {
                             BlockState blockState = chunk.getBlockState(blockPos);
+                            // Virtus Lamp functionality
                             if (blockState.getBlock() == NAIBlocks.VIRTUS_LAMP.get()) {
                                 if (isWithinCube(blockPos, mutableBlockPos) && mobCategory == MobCategory.MONSTER) {
                                     cir.setReturnValue(false);
                                     return;
                                 }
                             }
+                            // Nefas Lamp functionality
                             if (blockState.getBlock() == NAIBlocks.NEFAS_LAMP.get()) {
                                 if (isWithinCube(blockPos, mutableBlockPos) && mobCategory == MobCategory.CREATURE) {
                                     cir.setReturnValue(false);

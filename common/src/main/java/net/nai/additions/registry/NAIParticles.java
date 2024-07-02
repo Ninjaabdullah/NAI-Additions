@@ -10,6 +10,7 @@ import net.nai.additions.NAIAdditions;
 public class NAIParticles {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister.create(NAIAdditions.MOD_ID, Registries.PARTICLE_TYPE);
 
+    // Essence Particles
     public static final RegistrySupplier<SimpleParticleType> VIRTUS_PARTICLE = PARTICLE_TYPES.register("virtus", () ->
             new SimpleParticleType(false));
     public static final RegistrySupplier<SimpleParticleType> NEFAS_PARTICLE = PARTICLE_TYPES.register("nefas", () ->

@@ -20,6 +20,7 @@ public class NAILootTables {
 //                context.addPool(pool);
 //            }
 
+            // Reptianium Template in Ancient City
             if (builtin && BuiltInLootTables.ANCIENT_CITY.equals(id)) {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
@@ -28,6 +29,7 @@ public class NAILootTables {
                 context.addPool(pool);
             }
 
+            // Virtus Essence in Woodland Mansion
             if (builtin && BuiltInLootTables.WOODLAND_MANSION.equals(id)) {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(UniformGenerator.between(1,6))
@@ -36,6 +38,7 @@ public class NAILootTables {
                 context.addPool(pool);
             }
 
+            // Virtus Essence in Pillager Outpost
             if (builtin && BuiltInLootTables.PILLAGER_OUTPOST.equals(id)) {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))
@@ -44,6 +47,7 @@ public class NAILootTables {
                 context.addPool(pool);
             }
 
+            // Nefas Essence from Vex
             if (builtin && EntityType.VEX.getDefaultLootTable().equals(id)) {
                 LootPool.Builder pool = LootPool.lootPool()
                         .setRolls(ConstantValue.exactly(1))

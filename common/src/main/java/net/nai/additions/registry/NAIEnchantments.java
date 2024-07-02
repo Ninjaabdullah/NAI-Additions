@@ -10,6 +10,7 @@ import net.nai.additions.enchantments.EmissionDetectorEnchantment;
 public class NAIEnchantments {
     public static final DeferredRegister<Enchantment> ENCHANTMENTS = DeferredRegister.create(NAIAdditions.MOD_ID, Registries.ENCHANTMENT);
 
+    // Emission Detector Enchantment
     public static final RegistrySupplier<Enchantment> EMISSION_DETECTOR = ENCHANTMENTS.register("emission_detector", EmissionDetectorEnchantment::new);
 
     public static void init() {
