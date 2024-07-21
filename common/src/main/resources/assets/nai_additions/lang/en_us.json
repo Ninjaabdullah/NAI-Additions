@@ -23,6 +23,8 @@
   "block.nai_additions.virtus_lamp": "Virtus Lamp",
   "block.nai_additions.nefas_lamp": "Nefas Lamp",
 
+  "entity.nai_additions.soul": "Soul",
+
   "enchantment.nai_additions.emission_detector": "Emission Detector",
   "enchantment.nai_additions.emission_detector.desc": "Detects radioactive materials' emissions near the player",
 
