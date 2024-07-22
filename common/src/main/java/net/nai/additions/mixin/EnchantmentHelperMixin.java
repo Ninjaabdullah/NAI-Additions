@@ -29,6 +29,8 @@ public class EnchantmentHelperMixin {
         } else if (entity instanceof Player) {
             runIterationOnItem(enchantmentVisitor, livingEntity.getMainHandItem());
         }
+
+        ci.cancel();
     }
 
     @Inject(method = "doPostDamageEffects", at = @At("HEAD"), cancellable = true)
