@@ -27,6 +27,8 @@
 
   "enchantment.nai_additions.emission_detector": "Emission Detector",
   "enchantment.nai_additions.emission_detector.desc": "Detects radioactive materials' emissions near the player",
+  "enchantment.nai_additions.soul_hunter": "Soul Hunter",
+  "enchantment.nai_additions.soul_hunter.desc": "Upon killing a mob, there's a chance the soul of that mob to appear",
 
   "item.nai_additions.reptianium_shard": "Reptianium Shard",
   "item.nai_additions.reptianium_ingot": "Reptianium Ingot",
