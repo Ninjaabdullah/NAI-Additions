@@ -114,7 +114,11 @@ public class SoulEntity extends PathfinderMob {
 
     @Override
     public boolean hurt(DamageSource damageSource, float f) {
-        return false;
+        if (damageSource == damageSources().genericKill() && f == Float.MAX_VALUE) {
+            return super.hurt(damageSource, f);
+        } else {
+            return false;
+        }
     }
 
     @Override
