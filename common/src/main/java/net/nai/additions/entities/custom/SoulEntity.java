@@ -22,6 +22,7 @@ public class SoulEntity extends PathfinderMob {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
     private String previousCarrier;
+    private int despawnTimer;
 
     public SoulEntity(EntityType<? extends PathfinderMob> entityType, Level level) {
         super(entityType, level);
@@ -84,20 +85,30 @@ public class SoulEntity extends PathfinderMob {
         return this.previousCarrier;
     }
 
+    public int getDespawnTimer() {
+        return this.despawnTimer;
+    }
+
     public void setPreviousCarrier(String previousCarrier) {
         this.previousCarrier = previousCarrier;
+    }
+
+    public void setDespawnTimer(int despawnTimer) {
+        this.despawnTimer = despawnTimer;
     }
 
     @Override
     public void addAdditionalSaveData(CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
         compoundTag.putString("PreviousCarrier", this.previousCarrier);
+        compoundTag.putInt("DespawnTimer", this.getDespawnTimer());
     }
 
     @Override
     public void readAdditionalSaveData(CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         this.previousCarrier = compoundTag.getString("PreviousCarrier");
+        this.setDespawnTimer(compoundTag.getInt("DespawnTimer"));
     }
 
     @Override
@@ -129,6 +140,18 @@ public class SoulEntity extends PathfinderMob {
     @Override
     public boolean fireImmune() {
         return true;
+    }
+
+    @Override
+    protected void customServerAiStep() {
+        if (getDespawnTimer() > 0) {
+            int i = getDespawnTimer() - 1;
+            if (i <= 0) {
+                this.remove(RemovalReason.DISCARDED);
+            }
+            setDespawnTimer(i);
+        }
+        super.customServerAiStep();
     }
 
     public static AttributeSupplier.Builder createAttributes() {

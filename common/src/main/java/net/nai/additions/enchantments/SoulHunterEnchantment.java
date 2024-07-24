@@ -5,10 +5,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentCategory;
+import net.nai.additions.entities.custom.SoulEntity;
 import net.nai.additions.misc.NAITags;
 import net.nai.additions.registry.NAIEntities;
-
-import java.util.Objects;
 
 public class SoulHunterEnchantment extends Enchantment {
     public SoulHunterEnchantment() {
@@ -28,8 +27,11 @@ public class SoulHunterEnchantment extends Enchantment {
                 if (!entity.isAlive()) {
                     float rand = livingEntity.getRandom().nextFloat();
                     if (rand <= 0.10f * i) {
-                        Objects.requireNonNull(NAIEntities.SOUL.get().spawn(level, pos, MobSpawnType.TRIGGERED))
-                                .setPreviousCarrier(entityType.toString());
+                        SoulEntity soul = NAIEntities.SOUL.get().spawn(level, pos, MobSpawnType.TRIGGERED);
+                        if (soul != null) {
+                            soul.setPreviousCarrier(entityType.toString());
+                            soul.setDespawnTimer(20 * 2 * i);
+                        }
                     }
                 }
             }
