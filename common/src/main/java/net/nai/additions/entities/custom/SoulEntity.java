@@ -17,6 +17,7 @@ import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.nai.additions.registry.NAIItems;
 
 public class SoulEntity extends PathfinderMob {
     public final AnimationState idleAnimationState = new AnimationState();
@@ -115,8 +116,12 @@ public class SoulEntity extends PathfinderMob {
     protected InteractionResult mobInteract(Player player, InteractionHand interactionHand) {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (itemStack.is(Items.GLASS_BOTTLE)) {
-            ItemStack itemStack1 = ItemUtils.createFilledResult(itemStack, player, Items.POTION.getDefaultInstance());
-            player.setItemInHand(interactionHand, itemStack1);
+            CompoundTag prevCarrierNBTData = new CompoundTag();
+            prevCarrierNBTData.putString("nai_additions.captured_mob", getPreviousCarrier());
+            ItemStack itemStack1 = NAIItems.CAPTURED_SOUL.get().getDefaultInstance();
+            itemStack1.setTag(prevCarrierNBTData);
+            ItemStack itemStack2 = ItemUtils.createFilledResult(itemStack, player, itemStack1);
+            player.setItemInHand(interactionHand, itemStack2);
             this.remove(RemovalReason.DISCARDED);
             return InteractionResult.SUCCESS;
         }

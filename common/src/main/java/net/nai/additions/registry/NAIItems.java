@@ -10,6 +10,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import net.nai.additions.NAIAdditions;
+import net.nai.additions.items.CapturedSoulItem;
 import net.nai.additions.items.ReptianiumBlockItem;
 import net.nai.additions.items.armor.NAIArmorMaterials;
 import net.nai.additions.items.tools.NAIAxeItem;
@@ -103,6 +104,10 @@ public class NAIItems {
 
     public static final RegistrySupplier<Item> NEFAS_LAMP = ITEMS.register("nefas_lamp", () ->
             new BlockItem(NAIBlocks.NEFAS_LAMP.get(), new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).rarity(Rarity.RARE)));
+
+    // Captured Soul Item
+    public static final RegistrySupplier<Item> CAPTURED_SOUL = ITEMS.register("captured_soul", () ->
+            new CapturedSoulItem(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).stacksTo(1)));
 
     public static void init() {
         ITEMS.register();

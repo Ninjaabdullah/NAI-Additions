@@ -48,6 +48,8 @@
   "item.nai_additions.nefas_essence": "Nefas Essence",
   "item.nai_additions.life_essence": "Life Essence",
 
+  "item.nai_additions.captured_soul": "Captured Soul",
+
   "upgrade.nai_additions.reptianium_upgrade": "Reptianium Upgrade",
   "item.nai_additions.smithing_template.reptianium_upgrade.additions_slot_description": "Add Reptianium Ingot",
   "item.nai_additions.smithing_template.reptianium_upgrade.applies_to": "Netherite Equipment",
