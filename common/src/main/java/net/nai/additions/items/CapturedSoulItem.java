@@ -19,10 +19,10 @@ public class CapturedSoulItem extends Item {
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {
         if (itemStack.hasTag()) {
-            CompoundTag compoundTag = itemStack.getTag();
+            CompoundTag compoundTag = itemStack.getTagElement("nai_additions.captured_mob");
             assert compoundTag != null;
-            String string = compoundTag.getString("nai_additions.captured_mob");
-            list.add(Component.literal("Mob: ").append(Component.translatable(string).withStyle(ChatFormatting.GREEN)));
+            String string = compoundTag.getString("prev_mob");
+            list.add(Component.literal("Mob: ").withStyle(ChatFormatting.GRAY).append(Component.translatable(string).withStyle(ChatFormatting.GREEN)));
         }
     }
 }

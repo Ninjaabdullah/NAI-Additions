@@ -30,6 +30,7 @@ public class SoulHunterEnchantment extends Enchantment {
                         SoulEntity soul = NAIEntities.SOUL.get().spawn(level, pos, MobSpawnType.TRIGGERED);
                         if (soul != null) {
                             soul.setPreviousCarrier(entityType.toString());
+                            soul.setPreviousCarrierUUID(entity.getUUID());
                             soul.setDespawnTimer(20 * 2 * i);
                         }
                     }
