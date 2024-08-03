@@ -25,6 +25,7 @@ public class SoulEntity extends PathfinderMob {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
     private String previousCarrier;
+    private String previousCarrierID;
     private UUID previousCarrierUUID;
     private int despawnTimer;
 
@@ -33,6 +34,7 @@ public class SoulEntity extends PathfinderMob {
         this.moveControl = new FlyingMoveControl(this, 10, false);
         this.setPathfindingMalus(BlockPathTypes.WATER, -1.0f);
         this.previousCarrier = "";
+        this.previousCarrierID = "";
         this.previousCarrierUUID = null;
     }
 
@@ -90,6 +92,10 @@ public class SoulEntity extends PathfinderMob {
         return this.previousCarrier;
     }
 
+    public String getPreviousCarrierID() {
+        return this.previousCarrierID;
+    }
+
     public UUID getPreviousCarrierUUID() {
         return this.previousCarrierUUID;
     }
@@ -100,6 +106,10 @@ public class SoulEntity extends PathfinderMob {
 
     public void setPreviousCarrier(String previousCarrier) {
         this.previousCarrier = previousCarrier;
+    }
+
+    public void setPreviousCarrierID(String previousCarrierID) {
+        this.previousCarrierID = previousCarrierID;
     }
 
     public void setPreviousCarrierUUID(UUID previousCarrierUUID) {
@@ -114,6 +124,7 @@ public class SoulEntity extends PathfinderMob {
     public void addAdditionalSaveData(CompoundTag compoundTag) {
         super.addAdditionalSaveData(compoundTag);
         compoundTag.putString("PreviousCarrier", this.previousCarrier);
+        compoundTag.putString("PreviousCarrierID", this.previousCarrierID);
         compoundTag.putUUID("PreviousCarrierUUID", this.previousCarrierUUID);
         compoundTag.putInt("DespawnTimer", this.getDespawnTimer());
     }
@@ -122,6 +133,7 @@ public class SoulEntity extends PathfinderMob {
     public void readAdditionalSaveData(CompoundTag compoundTag) {
         super.readAdditionalSaveData(compoundTag);
         this.previousCarrier = compoundTag.getString("PreviousCarrier");
+        this.previousCarrierID = compoundTag.getString("PreviousCarrierID");
         if (this.previousCarrierUUID != null) {
             this.previousCarrierUUID = compoundTag.getUUID("PreviousCarrierUUID");
         }
@@ -133,13 +145,15 @@ public class SoulEntity extends PathfinderMob {
         ItemStack itemStack = player.getItemInHand(interactionHand);
         if (itemStack.is(Items.GLASS_BOTTLE)) {
             CompoundTag prevCarrierNBTData = new CompoundTag();
+            CompoundTag idNBTData = new CompoundTag();
             CompoundTag uuidNBTData = new CompoundTag();
             if (previousCarrierUUID != null) {
                 prevCarrierNBTData.putString("prev_mob", getPreviousCarrier());
+                idNBTData.putString("prev_mob_id", getPreviousCarrierID());
                 uuidNBTData.putUUID("prev_mob_uuid", getPreviousCarrierUUID());
             }
             ItemStack itemStack1 = NAIItems.CAPTURED_SOUL.get().getDefaultInstance();
-            itemStack1.getOrCreateTagElement("nai_additions.captured_mob").merge(prevCarrierNBTData).merge(uuidNBTData);
+            itemStack1.getOrCreateTagElement("nai_additions.captured_mob").merge(prevCarrierNBTData).merge(idNBTData).merge(uuidNBTData);
             ItemStack itemStack2 = ItemUtils.createFilledResult(itemStack, player, itemStack1);
             player.setItemInHand(interactionHand, itemStack2);
             this.remove(RemovalReason.DISCARDED);

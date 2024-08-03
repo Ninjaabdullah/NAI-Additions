@@ -21,5 +21,6 @@ public class NAIAdditions
 		NAIBlockEntityTypes.init();
 		NAILootTables.init();
 		NAITrades.init();
+		NAIRecipeSerializer.init();
 	}
 }
