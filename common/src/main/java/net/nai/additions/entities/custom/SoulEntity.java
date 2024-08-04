@@ -215,6 +215,12 @@ public class SoulEntity extends PathfinderMob {
         super.customServerAiStep();
     }
 
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.SOUL_ESCAPE;
+    }
+
     public static AttributeSupplier.Builder createAttributes() {
         return PathfinderMob.createLivingAttributes()
                 .add(Attributes.FOLLOW_RANGE, 10D)
