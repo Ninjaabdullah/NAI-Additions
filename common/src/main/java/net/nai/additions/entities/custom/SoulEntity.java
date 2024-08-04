@@ -1,6 +1,10 @@
 package net.nai.additions.entities.custom;
 
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
@@ -18,6 +22,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.nai.additions.registry.NAIItems;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
@@ -156,10 +161,27 @@ public class SoulEntity extends PathfinderMob {
             itemStack1.getOrCreateTagElement("nai_additions.captured_mob").merge(prevCarrierNBTData).merge(idNBTData).merge(uuidNBTData);
             ItemStack itemStack2 = ItemUtils.createFilledResult(itemStack, player, itemStack1);
             player.setItemInHand(interactionHand, itemStack2);
+            particleExplosion();
+            this.playSound(SoundEvents.PLAYER_LEVELUP, 1.0F, this.random.nextFloat());
             this.remove(RemovalReason.DISCARDED);
             return InteractionResult.SUCCESS;
         }
         return super.mobInteract(player, interactionHand);
+    }
+
+    private void particleExplosion() {
+        RandomSource randomSource = this.getRandom();
+        if (this.level().isClientSide) {
+            double x = this.getX();
+            double y = this.getY();
+            double z = this.getZ();
+            for (int i = 0; i < 128; ++i) {
+                double xSpeed = -0.5 + randomSource.nextDouble();
+                double ySpeed = -0.5 + randomSource.nextDouble();
+                double zSpeed = -0.5 + randomSource.nextDouble();
+                this.level().addParticle(ParticleTypes.SOUL_FIRE_FLAME, x, y + 1.5, z, xSpeed, ySpeed, zSpeed);
+            }
+        }
     }
 
     @Override
