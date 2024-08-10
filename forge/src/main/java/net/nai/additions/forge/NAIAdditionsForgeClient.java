@@ -19,5 +19,6 @@ public class NAIAdditionsForgeClient {
     public static void onRegisterParticleProviders(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(NAIParticles.VIRTUS_PARTICLE.get(), EssenceParticle.Virtus::new);
         event.registerSpriteSet(NAIParticles.NEFAS_PARTICLE.get(), EssenceParticle.Nefas::new);
+        event.registerSpriteSet(NAIParticles.MALUM_PARTICLE.get(), EssenceParticle.Malum::new);
     }
 }

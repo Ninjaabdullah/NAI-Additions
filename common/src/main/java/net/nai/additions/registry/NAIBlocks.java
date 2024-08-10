@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.nai.additions.NAIAdditions;
+import net.nai.additions.blocks.MalumLampBlock;
 import net.nai.additions.blocks.NefasLampBlock;
 import net.nai.additions.blocks.VirtusLampBlock;
 
@@ -57,6 +58,12 @@ public class NAIBlocks {
                     .strength(2.0f)
                     .sound(SoundType.AMETHYST)
                     .lightLevel((blockStatex) -> 6)));
+
+    public static final RegistrySupplier<Block> MALUM_LAMP = BLOCKS.register("malum_lamp", () ->
+            new MalumLampBlock(BlockBehaviour.Properties.of()
+                    .strength(2.0f)
+                    .sound(SoundType.AMETHYST)
+                    .lightLevel((blockStatex) -> 15)));
 
     public static void init() {
         BLOCKS.register();

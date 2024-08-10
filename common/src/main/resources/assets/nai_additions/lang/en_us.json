@@ -22,6 +22,7 @@
 
   "block.nai_additions.virtus_lamp": "Virtus Lamp",
   "block.nai_additions.nefas_lamp": "Nefas Lamp",
+  "block.nai_additions.malum_lamp": "Malum Lamp",
 
   "entity.nai_additions.soul": "Soul",
 
@@ -46,6 +47,7 @@
 
   "item.nai_additions.virtus_essence": "Virtus Essence",
   "item.nai_additions.nefas_essence": "Nefas Essence",
+  "item.nai_additions.malum_essence": "Malum Essence",
   "item.nai_additions.life_essence": "Life Essence",
 
   "item.nai_additions.captured_soul": "Captured Soul",

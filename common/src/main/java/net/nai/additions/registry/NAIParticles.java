@@ -15,6 +15,8 @@ public class NAIParticles {
             new SimpleParticleType(false));
     public static final RegistrySupplier<SimpleParticleType> NEFAS_PARTICLE = PARTICLE_TYPES.register("nefas", () ->
             new SimpleParticleType(false));
+    public static final RegistrySupplier<SimpleParticleType> MALUM_PARTICLE = PARTICLE_TYPES.register("malum", () ->
+            new SimpleParticleType(false));
 
     public static void init() {
         PARTICLE_TYPES.register();

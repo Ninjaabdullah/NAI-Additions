@@ -16,5 +16,6 @@ public class NAIAdditionsFabricClient implements ClientModInitializer {
 
         ParticleFactoryRegistry.getInstance().register(NAIParticles.VIRTUS_PARTICLE.get(), EssenceParticle.Virtus::new);
         ParticleFactoryRegistry.getInstance().register(NAIParticles.NEFAS_PARTICLE.get(), EssenceParticle.Nefas::new);
+        ParticleFactoryRegistry.getInstance().register(NAIParticles.MALUM_PARTICLE.get(), EssenceParticle.Malum::new);
     }
 }

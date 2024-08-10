@@ -95,6 +95,9 @@ public class NAIItems {
     public static final RegistrySupplier<Item> NEFAS_ESSENCE = ITEMS.register("nefas_essence", () ->
             new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
 
+    public static final RegistrySupplier<Item> MALUM_ESSENCE = ITEMS.register("malum_essence", () ->
+            new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
+
     public static final RegistrySupplier<Item> LIFE_ESSENCE = ITEMS.register("life_essence", () ->
             new Item(new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB)));
 
@@ -104,6 +107,9 @@ public class NAIItems {
 
     public static final RegistrySupplier<Item> NEFAS_LAMP = ITEMS.register("nefas_lamp", () ->
             new BlockItem(NAIBlocks.NEFAS_LAMP.get(), new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).rarity(Rarity.RARE)));
+
+    public static final RegistrySupplier<Item> MALUM_LAMP = ITEMS.register("malum_lamp", () ->
+            new BlockItem(NAIBlocks.MALUM_LAMP.get(), new Item.Properties().arch$tab(NAITabs.NAI_ADDITIONS_TAB).rarity(Rarity.RARE)));
 
     // Captured Soul Item
     public static final RegistrySupplier<Item> CAPTURED_SOUL = ITEMS.register("captured_soul", () ->

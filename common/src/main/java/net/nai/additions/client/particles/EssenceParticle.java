@@ -82,4 +82,20 @@ public class EssenceParticle extends TextureSheetParticle {
             return particle;
         }
     }
+
+    @Environment(EnvType.CLIENT)
+    public static class Malum implements ParticleProvider<SimpleParticleType> {
+        private final SpriteSet spriteSet;
+
+        public Malum(SpriteSet spriteSet) {
+            this.spriteSet = spriteSet;
+        }
+
+        public Particle createParticle(SimpleParticleType type, ClientLevel world, double x, double y, double z, double d, double e, double f) {
+            EssenceParticle particle = new EssenceParticle(world, x, y, z, d, e, f, spriteSet);
+            particle.setColor(0.7804f, 0.3569f, 0.9490f);
+            particle.pickSprite(this.spriteSet);
+            return particle;
+        }
+    }
 }
